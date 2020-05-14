@@ -6,4 +6,4 @@ script:
 cd ex_authenticationRoles/test; npm install; npm test;
 
 services:
-- mongodb
+- "mongodb"
