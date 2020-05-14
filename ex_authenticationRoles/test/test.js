@@ -81,54 +81,54 @@ describe("Tests", () => {
         );
 
 
-        it("Tests Updated product values returned by API.",
-            (done) => {
+        // it("Tests Updated product values returned by API.",
+        //     (done) => {
             
-                chai.request(app)
-                    .put(`/Home/EditProduct`)
-                    .set('Content-Type', 'application/json; charset=utf-8')
-                    .send({'id': productID, 'name': 'Something New', 'description': 'This is updating the description', 'price': 200})
-                    .end((err, res) => {
-                        console.log("ID to be updated: " + productID);
-                        res.should.have.status(200);
-                        res.body.should.be.a('object');
-                        console.log("Showing output of Edit Product.");
-                        console.log("ID:", JSON.stringify(res.body.product._id));
-                        console.log("Name:", JSON.stringify(res.body.product.name));
-                        console.log("Type:", JSON.stringify(res.body.product.type));
-                        console.log("Manufacturer:", JSON.stringify(res.body.product.manufacturer));
-                        console.log("Price:", JSON.stringify(res.body.product.price));
-                        console.log("Description:", JSON.stringify(res.body.product.description));
-                        res.body.product.name.should.equal('Something New');
-                        res.body.product.type.should.equal('RAM');
-                        res.body.product.manufacturer.should.equal('Corsair');
-                        res.body.product.price.should.equal('200');
-                        res.body.product.description.should.equal('This is updating the description');
+        //         chai.request(app)
+        //             .put(`/Home/EditProduct`)
+        //             .set('Content-Type', 'application/json; charset=utf-8')
+        //             .send({'id': productID, 'name': 'Something New', 'description': 'This is updating the description', 'price': 200})
+        //             .end((err, res) => {
+        //                 console.log("ID to be updated: " + productID);
+        //                 res.should.have.status(200);
+        //                 res.body.should.be.a('object');
+        //                 console.log("Showing output of Edit Product.");
+        //                 console.log("ID:", JSON.stringify(res.body.product._id));
+        //                 console.log("Name:", JSON.stringify(res.body.product.name));
+        //                 console.log("Type:", JSON.stringify(res.body.product.type));
+        //                 console.log("Manufacturer:", JSON.stringify(res.body.product.manufacturer));
+        //                 console.log("Price:", JSON.stringify(res.body.product.price));
+        //                 console.log("Description:", JSON.stringify(res.body.product.description));
+        //                 res.body.product.name.should.equal('Something New');
+        //                 res.body.product.type.should.equal('RAM');
+        //                 res.body.product.manufacturer.should.equal('Corsair');
+        //                 res.body.product.price.should.equal('200');
+        //                 res.body.product.description.should.equal('This is updating the description');
 
 
-                        done();
-                    });
-            }
-        );
+        //                 done();
+        //             });
+        //     }
+        // );
 
 
-        it("Tests Deleted product",
-            (done) => {
+        // it("Tests Deleted product",
+        //     (done) => {
 
-                chai.request(app)
-                .delete(`/Home/Delete`)
-                .set('Content-Type', 'application/json; charset=utf-8')
-                .send({'_id': productID})
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.be.a('object');
-                    console.log("Deleting Product with id: " + productID);
-                    res.body.answer.should.equal(true);
-                    res.body._id.should.equal(productID)
-                    done();
-                });
-            }
-        );
+        //         chai.request(app)
+        //         .delete(`/Home/Delete`)
+        //         .set('Content-Type', 'application/json; charset=utf-8')
+        //         .send({'_id': productID})
+        //         .end((err, res) => {
+        //             res.should.have.status(200);
+        //             res.body.should.be.a('object');
+        //             console.log("Deleting Product with id: " + productID);
+        //             res.body.answer.should.equal(true);
+        //             res.body._id.should.equal(productID)
+        //             done();
+        //         });
+        //     }
+        // );
 
 
 
