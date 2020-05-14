@@ -3,7 +3,7 @@ node_js:
 - "stable"
 
 script:
-cd ex_authenticationRoles/test; npm test
+cd test; npm test
 
 services:
 - mongodb
