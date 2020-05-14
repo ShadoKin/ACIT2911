@@ -1,0 +1,37 @@
+<br/>
+<br/>
+<br/>
+<form>
+  <table >
+    <tr>Name:</tr>
+    <tr>
+      <td><input name="name" type="text" value="{{productName}}" [(ngModel)]="_name"/></td>
+    </tr>
+
+    <!-- <tr>Type:</tr>
+    <tr>
+      <td><input name="type" type="text" [(ngModel)]="_type"/></td>
+    </tr>
+
+    <tr>Manufacturer:</tr>
+    <tr>
+      <td><input name="manufacturer" type="text" [(ngModel)]="_manufacturer"/></td>
+    </tr> -->
+
+    <tr>Description:</tr>
+    <tr>
+      <td><input name="description" type="text" [(ngModel)]="_description"/></td>
+    </tr>
+
+    <tr>Price:</tr>
+    <tr>
+      <td><input name="price" type="text" [(ngModel)]="_price"/></td>
+    </tr>
+
+    <tr>
+      <td><input type="reset" value="Reset" /></td>
+      <td><input type="submit" value="Submit" (click)="updateProduct()" /></td> 
+    </tr>
+    
+  </table>
+</form>

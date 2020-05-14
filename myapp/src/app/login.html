@@ -1,0 +1,22 @@
+<body>
+    <div class = "login-box">
+
+      <h1>Login</h1>
+
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" [(ngModel)]="username" name="" value="">
+      </div>
+
+      <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <input type="Password" placeholder="Password" [(ngModel)]="password" name="" value="">
+      </div>
+  <div class="links">
+        <a href="http://localhost:4200/register" >Need An Account?</a><br>
+        <!-- <a href="#"style="float:left!important;" >Forgot Your Password?</a> -->
+  </div>
+      <button (click)="login()" class="btn" type="button" name="Sign In">Sign In</button>
+    </div>
+
+  </body>

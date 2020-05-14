@@ -1,0 +1,27 @@
+<div class="Nav" *ngIf="LoginStatus()==1">
+    <nav>
+        <a routerLink="/index" routerLinkActive="active" style="padding-bottom: .5rem; padding-top: .5rem; margin-right: 20px">Home</a>
+        <a routerLink="/manage" routerLinkActive="active" style="padding-bottom: .5rem; padding-top: .5rem; margin-right: 20px">Product Manager</a> 
+        <a routerLink="/products" routerLinkActive="active" style="padding-bottom: .5rem; padding-top: .5rem; margin-right: 20px">My Products</a> 
+        <a href="#" (click)="logout()" style="padding-bottom: .5rem; padding-top: .5rem; margin-right: 20px">Logout ({{name}})</a>
+    </nav>
+</div>
+<div class="Nav" *ngIf="LoginStatus()==2">
+    <nav>
+        <a routerLink="/index" routerLinkActive="active" style="padding-bottom: .5rem; padding-top: .5rem; margin-right: 20px">Home</a> 
+        <a routerLink="/products" routerLinkActive="active" style="padding-bottom: .5rem; padding-top: .5rem; margin-right: 20px">My Products</a> 
+        <a href="#" (click)="logout()" style="padding-bottom: .5rem; padding-top: .5rem; margin-right: 20px">Logout ({{name}})</a>
+    </nav>
+</div>
+<div class="Nav" *ngIf="LoginStatus()==3">
+    <nav>
+        <a routerLink="/index" routerLinkActive="active" style="padding-bottom: .5rem; padding-top: .5rem; margin-right: 20px">Home</a> 
+        <!-- <a routerLink="#" routerLinkActive="active" style="padding-bottom: .5rem; padding-top: .5rem; margin-right: 20px">Support</a>  -->
+        <a routerLink="/register" routerLinkActive="active" style="padding-bottom: .4rem; padding-top: .4rem; margin-right: 20px">Register</a> 
+        <a routerLink="/login" routerLinkActive="active" style="padding-bottom: .4rem; padding-top: .4rem; margin-right: 20px">Login</a>
+    </nav>
+</div>
+
+<!-- Where router should display a view -->
+<router-outlet></router-outlet>`
+

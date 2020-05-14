@@ -1,0 +1,56 @@
+<body>
+  <br/>
+  <br/>
+  <div class="grid-container">
+    <div class="Nav">
+      <ul>
+        <li><a href='#'>Choose Component</a>
+          <ul>
+            <li><a id="CPU" href='#'>CPUs</a></li>
+            <li><a id="Coolers" href='#'>CPU Coolers</a></li>
+            <li><a id="Motherboards" href='#'>Motherboards</a></li>
+            <li><a id="Memory" href='#'>Memory</a></li>
+            <li><a id="Storage" href='#'>Storage</a></li>
+            <li><a id="videoCards" href='#'>Video Cards</a></li>
+            <li><a id="PSU"href='#'>Power Supply Unit</a></li>
+          </ul>
+        </li>
+        <li><a href='http://localhost:4200/products'>Shopping Cart</a></li>
+      </ul>
+    </div>
+    <br/>
+    <div class="Body">
+      <div class= CPUs>
+        <h2>Part Specification</h2>
+        <form>
+          <input type="text" name="_type" [(ngModel)]="_type" placeholder="Part Type" required>
+          <input type="text" name="_manufacturer" [(ngModel)]="_manufacturer" placeholder="Manufacturer" required>
+          <input type="text" name="_name" [(ngModel)]="_name" placeholder="Model" required>
+          <input type="text" name="_description" [(ngModel)]="_description" placeholder="Description" required>
+          <input type="text" name="_price" [(ngModel)]="_price" placeholder="Price" required>
+
+          <input type="submit" (click)="createProduct()" value="Submit">
+        </form>
+      </div>
+    </div>
+
+    <table>
+      <tr *ngFor="let product of _productArray">
+          <div>
+              <td>Type: {{product.type}}</td>
+              <td>Manufacturer: {{product.manufacturer}}</td>
+              <td>Name: {{product.name}}</td>
+              <td>Description: {{product.description}}</td>
+              <td>Price: {{product.price}}</td>
+              <td><a [routerLink]="['/update', product._id]">Edit</a></td>
+              <td><a href="http://localhost:4200/manage" (click)="deleteProduct(product._id)" >Delete</a></td>
+          </div>
+      </tr>
+  </table>
+  </div>
+
+
+
+</body>
+
+

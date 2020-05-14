@@ -1,0 +1,36 @@
+Nav {
+    backdrop-filter: saturate(180%) blur(20px);
+    grid-area: Nav;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .85);
+    padding-top: .65rem!important;
+    padding-bottom: .65rem!important;
+    box-sizing: border-box;
+    top: 0;
+    z-index: 1020;
+    display: block;
+}
+.link {
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+}
+.link a {
+    transition: .2s;
+    color: #999;
+    text-decoration: none;
+}
+.link a:hover {
+    text-decoration: none;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: grey;
+}
+ul {
+    list-style-type: none;
+    width: fit-content;
+}
